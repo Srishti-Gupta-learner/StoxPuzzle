@@ -1,11 +1,11 @@
 import React from 'react'
-import Pricing from './Pricing';
+// import Pricing from './Pricing';
 import Charges from './Charges';
 
 function Pricepage() {
     return (  
         <>
-        <Pricing />
+        {/* <Pricing /> */}
         <Charges />
         </>
     );
