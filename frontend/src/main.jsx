@@ -13,7 +13,7 @@ import Supportpage  from './landingpage/support/Supportpage'
 // import NotFound from "./landing_page/NotFound";
 import Navbar from "./landingpage/Navbar";
 import Footer from "./landingpage/Footer";
-import Notfound from './landingpage/Notfound'
+import Notfound from './landingpage/Notfound';
 
 // import App from './App.jsx'
 
