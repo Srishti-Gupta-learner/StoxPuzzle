@@ -116,7 +116,7 @@ function Universe() {
 
         <button
           type="button"
-          class="btn btn-primary mt-3"
+          class="btn btn-primary mt-3 text-center m-5"
           style={{ borderRadius: "5%", width: "15em" }}
         >
           Signup for Free
