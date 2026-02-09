@@ -1,28 +1,124 @@
-import React from 'react'
+import React, { useState } from "react";
+import axios from "axios"
+import {Link} from 'react-router-dom';
 
-function Signup() {
-    return (  
-        <div className='container-fluid p-5'>
-            <div className='row  text-left'>
-                <div className='col p-5'>
-                    <img src='media/signup.svg' alt='signup' />
-                </div>
-                 <div className='col p-5'>
-                    <form id='Account_form d-inline-flex'>
-                    <h2>Signup</h2>
-                    <p style={{fontSize:"18px" , color:"gray"}}>Or track your existing application</p>
-                    <div className='row not-around d-flex' style={{width:"20em", border:"solid 1px"}}>
-                      <span> <img src='media/flag.png' alt='flag' />+91</span>
-                       <input type='number' placeholder='Enter your mobile number' style={{width:"200", border:"none"}} />
-                    </div>
-                    <button type="button" class="btn btn-primary mt-3" style={{borderRadius:"5%", width:"15em"}}>Get OTP</button>
-                    <p>By proceeding, you agree to the Zerodha terms & privacy policy</p><hr />
-                    <p>Looking to open NRI account? Click here</p>
-                 </form>
-                 </div>
-            </div>
-        </div>
-    );
+const Signup = () => {
+  let [data, setData]= useState({
+    name:"",
+    email:"",
+    password:""
+  })
+  let [message, setMessage]= useState("")
+//   let url = process.env.REACT_APP_BACKEND_URL;;
+  let url = import.meta.env.VITE_BACKEND_URL;
+
+  function handleChange(e){
+      setData((data)=>{
+        return{...data,[ e.target.name]:e.target.value}
+      })
+  }
+  async function handleSubmit(e){
+    e.preventDefault();
+   try {
+    const res = await axios.post(`${url}/signup`, {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    });
+
+    setMessage("Signup successful!");
+    console.log("Response:", res.data);
+    setData({ name: "", email: "", password: "" });
+
+  } catch (error) {
+    console.error(error);
+    setMessage("Something went wrong. Please try again!");
+  }
 }
+  return (
+    <div className="container mt-5 py-5">
+      <div className="row justify-content-center">
+       
+        <div className="col p-5">
+            <img src="media/signup.svg" alt="signup" />
+        </div>
+        
+          <div className="col p-5">
+          <div className="card shadow p-4 rounded-4">
+            <h3 className="text-center mb-4">Create your account</h3>
+            <p>{message}</p>
+
+            <form onSubmit={handleSubmit}>
+              {/* Name */}
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label fw-semibold">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="form-control"
+                  placeholder="Enter your name"
+                  value={data.name}
+                  onChange={handleChange}
+                  name="name"
+                  required
+                />
+              </div>
+
+              {/* Email */}
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label fw-semibold">
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="form-control"
+                  placeholder="name@example.com"
+                  value={data.email}
+                  onChange={handleChange}
+                  name="email"
+                  required
+                />
+              </div>
+
+              {/* Password */}
+              <div className="mb-3">
+                <label htmlFor="password" className="form-label fw-semibold">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  className="form-control"
+                  placeholder="Enter a strong password"
+                  value={data.password}
+                  onChange={handleChange}
+                  name="password"
+                  required
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button type="submit" className="btn btn-primary w-100 py-2">
+                Sign Up
+              </button>
+
+              {/* Login Link */}
+              <p className="text-center mt-3 mb-0">
+                Already have an account?{" "}
+                <Link to="/login" className="text-decoration-none">
+                  Log in
+                </Link>
+              </p>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+   
+  );
+};
 
 export default Signup;

@@ -2,6 +2,10 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {BrowserRouter, Routes, Route } from "react-router-dom" 
 import './index.css'
+import 'react-toastify/dist/ReactToastify.css';
+
+import Signup from './landingpage/signup/Signup';
+import Login from './landingpage/signup/Login';
 
 import Homepage  from './landingpage/home/Homepage'
 import Signuppage  from './landingpage/signup/Signuppage'
@@ -24,6 +28,8 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/signup' element={<Signuppage />} />
+        <Route path='/login' element={<Login/>}/>
+        {/* <Route path='/signup' element={<Signup/>}/> */}
         <Route path='/about' element={<Aboutpage />} />
         <Route path='/price' element={<Pricepage />} />
         <Route path='/product' element={<Productpage />} />
