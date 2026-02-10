@@ -55,7 +55,7 @@ function Footer() {
         </div>
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
           <p>
-            Zerodha Broking Ltd.: Member of NSEandBSE SEBI Registration no.:
+            StoxPuzzle Broking Ltd.: Member of NSEandBSE SEBI Registration no.:
             INZ000031633 CDSL: Depository services through StoxPuzzle Securities
             Pvt. Ltd. SEBI Registration no.: IN-DP-100-2015 Commodity Trading
             through StoxPuzzle Commodities Pvt. Ltd. MCX: 46025 . SEBI Registration
