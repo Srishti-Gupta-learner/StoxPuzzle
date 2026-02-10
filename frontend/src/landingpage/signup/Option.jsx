@@ -3,7 +3,7 @@ import React from 'react'
 function Option() {
     return ( 
         <div className='container-fluid p-3  text-center'>
-            <h4 >Investment options with Zerodha demat account</h4>
+            <h4 >Investment options with StoxPuzzle demat account</h4>
                 
                <div className='bar d-inline-flex '>
 

@@ -6,7 +6,7 @@ function Benifit() {
                   
                 <div className='col'>
                     <img src='media/console.png' alt='benifit' style={{width:"20rem"}} />
-                  <h4>Benefits of opening a Zerodha demat account</h4>
+                  <h4>Benefits of opening a StoxPuzzle demat account</h4>
                 </div>
                 <div className='col text-left'>
                   <h5 style={{textAlign:"left"}} > Unbeatable pricing</h5> <br />
@@ -18,7 +18,7 @@ function Benifit() {
                    <h5 style={{textAlign:"left"}}> No spam or gimmicks </h5> <br />
                    <p style={{color:"gray", fontSize:"18px",textAlign:"left"}}>Committed to transparency — no gimmicks, spam, "gamification", or intrusive push notifications.</p><br />
 
-                   <h5 style={{textAlign:"left"}}> The Zerodha universe </h5> <br />
+                   <h5 style={{textAlign:"left"}}> The StoxPuzzle universe </h5> <br />
                    <p style={{color:"gray", fontSize:"18px",textAlign:"left"}}>More than just an app — gain free access to the entire ecosystem of our partner products.</p><br />
                 </div>
             </div>

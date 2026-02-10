@@ -5,7 +5,6 @@ import Option from './Option';
 import Steps from './Steps';
 import Benifit from './Benifit';
 import Explore from './Explore';
-import Faq from './Faq';
 import OpenAccount from '../OpenAccount';
 
 
@@ -18,7 +17,6 @@ function Signuppage() {
        <Steps />
        <Benifit />
        <Explore />
-       <Faq />
        <OpenAccount />
        </>
       );

@@ -6,7 +6,7 @@ function Steps() {
       className="container-fluid p-3 text-center"
       style={{ backgroundColor: "rgb(243, 245, 243)" }}
     >
-      <h4>Steps to open a demat account with Zerodha</h4>
+      <h4>Steps to open a demat account with StoxPuzzle</h4>
       <div className="row p-5 text-center">
         <div className="col">
           <iframe
